@@ -1,0 +1,9 @@
+version: "3.3"
+services:
+  commission-calculator-app:
+    container_name: "commission-calculator-app"
+    build:
+      context: ..
+      dockerfile: docker/dockerfiles/Dockerfile
+    volumes:
+      - ../codes/:/var/www/html/

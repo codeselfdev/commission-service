@@ -1,0 +1,34 @@
+{
+    "name": "commission/calculation",
+    "description": "A system which calculate commission fee regarding on some defined rules.",
+    "keywords": [],
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Commission\\Calculation\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Commission\\Calculation\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "php": ">=8.0",
+        "symfony/config": "^6.0",
+        "symfony/dependency-injection": "^6.0",
+        "symfony/http-client": "^6.0",
+        "symfony/yaml": "^6.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "3.4",
+        "phpunit/phpunit": "9.5",
+        "symfony/var-dumper": "^6.0"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "phpunit --colors=always tests"
+    }
+}
