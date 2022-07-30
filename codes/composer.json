@@ -15,9 +15,11 @@
     },
     "require": {
         "php": ">=8.0",
+        "doctrine/annotations": "^1.13",
         "symfony/config": "^6.0",
         "symfony/dependency-injection": "^6.0",
         "symfony/http-client": "^6.0",
+        "symfony/validator": "^6.0",
         "symfony/yaml": "^6.0"
     },
     "require-dev": {
