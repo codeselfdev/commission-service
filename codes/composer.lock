@@ -309,6 +309,7 @@
         },
         {
             "name": "symfony/config",
+<<<<<<< HEAD
             "version": "v6.1.3",
             "source": {
                 "type": "git",
@@ -329,6 +330,29 @@
             },
             "conflict": {
                 "symfony/finder": "<5.4"
+=======
+            "version": "v6.0.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/config.git",
+                "reference": "956d4ec5df274dda91a4cedfccc2bfd063f6f649"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/config/zipball/956d4ec5df274dda91a4cedfccc2bfd063f6f649",
+                "reference": "956d4ec5df274dda91a4cedfccc2bfd063f6f649",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.2",
+                "symfony/deprecation-contracts": "^2.1|^3",
+                "symfony/filesystem": "^5.4|^6.0",
+                "symfony/polyfill-ctype": "~1.8",
+                "symfony/polyfill-php81": "^1.22"
+            },
+            "conflict": {
+                "symfony/finder": "<4.4"
+>>>>>>> b7d5a60... Dockerised a base php templates
             },
             "require-dev": {
                 "symfony/event-dispatcher": "^5.4|^6.0",
@@ -366,7 +390,11 @@
             "description": "Helps you find, load, combine, autofill and validate configuration values of any kind",
             "homepage": "https://symfony.com",
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/config/tree/v6.1.3"
+=======
+                "source": "https://github.com/symfony/config/tree/v6.0.11"
+>>>>>>> b7d5a60... Dockerised a base php templates
             },
             "funding": [
                 {
@@ -382,6 +410,7 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2022-07-20T15:00:40+00:00"
         },
         {
@@ -402,11 +431,38 @@
                 "php": ">=8.1",
                 "psr/container": "^1.1|^2.0",
                 "symfony/deprecation-contracts": "^2.1|^3",
+=======
+            "time": "2022-06-27T17:10:44+00:00"
+        },
+        {
+            "name": "symfony/dependency-injection",
+            "version": "v6.0.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/dependency-injection.git",
+                "reference": "5f6246e27475a90a0da5cd704fb5a47880a5d3cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/5f6246e27475a90a0da5cd704fb5a47880a5d3cc",
+                "reference": "5f6246e27475a90a0da5cd704fb5a47880a5d3cc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.2",
+                "psr/container": "^1.1|^2.0",
+                "symfony/deprecation-contracts": "^2.1|^3",
+                "symfony/polyfill-php81": "^1.22",
+>>>>>>> b7d5a60... Dockerised a base php templates
                 "symfony/service-contracts": "^1.1.6|^2.0|^3.0"
             },
             "conflict": {
                 "ext-psr": "<1.1|>=2",
+<<<<<<< HEAD
                 "symfony/config": "<6.1",
+=======
+                "symfony/config": "<5.4",
+>>>>>>> b7d5a60... Dockerised a base php templates
                 "symfony/finder": "<5.4",
                 "symfony/proxy-manager-bridge": "<5.4",
                 "symfony/yaml": "<5.4"
@@ -416,7 +472,11 @@
                 "symfony/service-implementation": "1.1|2.0|3.0"
             },
             "require-dev": {
+<<<<<<< HEAD
                 "symfony/config": "^6.1",
+=======
+                "symfony/config": "^5.4|^6.0",
+>>>>>>> b7d5a60... Dockerised a base php templates
                 "symfony/expression-language": "^5.4|^6.0",
                 "symfony/yaml": "^5.4|^6.0"
             },
@@ -453,7 +513,11 @@
             "description": "Allows you to standardize and centralize the way objects are constructed in your application",
             "homepage": "https://symfony.com",
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/dependency-injection/tree/v6.1.3"
+=======
+                "source": "https://github.com/symfony/dependency-injection/tree/v6.0.11"
+>>>>>>> b7d5a60... Dockerised a base php templates
             },
             "funding": [
                 {
@@ -469,6 +533,7 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2022-07-20T13:46:29+00:00"
         },
         {
@@ -487,11 +552,35 @@
             },
             "require": {
                 "php": ">=8.1"
+=======
+            "time": "2022-07-20T13:45:53+00:00"
+        },
+        {
+            "name": "symfony/deprecation-contracts",
+            "version": "v3.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/deprecation-contracts.git",
+                "reference": "26954b3d62a6c5fd0ea8a2a00c0353a14978d05c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/26954b3d62a6c5fd0ea8a2a00c0353a14978d05c",
+                "reference": "26954b3d62a6c5fd0ea8a2a00c0353a14978d05c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.2"
+>>>>>>> b7d5a60... Dockerised a base php templates
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
+<<<<<<< HEAD
                     "dev-main": "3.1-dev"
+=======
+                    "dev-main": "3.0-dev"
+>>>>>>> b7d5a60... Dockerised a base php templates
                 },
                 "thanks": {
                     "name": "symfony/contracts",
@@ -520,7 +609,11 @@
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/deprecation-contracts/tree/v3.1.1"
+=======
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.0.2"
+>>>>>>> b7d5a60... Dockerised a base php templates
             },
             "funding": [
                 {
@@ -536,6 +629,7 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2022-02-25T11:15:52+00:00"
         },
         {
@@ -554,6 +648,26 @@
             },
             "require": {
                 "php": ">=8.1",
+=======
+            "time": "2022-01-02T09:55:41+00:00"
+        },
+        {
+            "name": "symfony/filesystem",
+            "version": "v6.0.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/filesystem.git",
+                "reference": "33787a6b6e055245d5710697dfc4a9a2b896c032"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/33787a6b6e055245d5710697dfc4a9a2b896c032",
+                "reference": "33787a6b6e055245d5710697dfc4a9a2b896c032",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.2",
+>>>>>>> b7d5a60... Dockerised a base php templates
                 "symfony/polyfill-ctype": "~1.8",
                 "symfony/polyfill-mbstring": "~1.8"
             },
@@ -583,7 +697,11 @@
             "description": "Provides basic utilities for the filesystem",
             "homepage": "https://symfony.com",
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/filesystem/tree/v6.1.3"
+=======
+                "source": "https://github.com/symfony/filesystem/tree/v6.0.11"
+>>>>>>> b7d5a60... Dockerised a base php templates
             },
             "funding": [
                 {
@@ -599,6 +717,7 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2022-07-20T14:45:06+00:00"
         },
         {
@@ -617,6 +736,26 @@
             },
             "require": {
                 "php": ">=8.1",
+=======
+            "time": "2022-07-20T14:06:08+00:00"
+        },
+        {
+            "name": "symfony/http-client",
+            "version": "v6.0.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/http-client.git",
+                "reference": "49bef7df70f84a4f5d516eb268963779ca80320d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/http-client/zipball/49bef7df70f84a4f5d516eb268963779ca80320d",
+                "reference": "49bef7df70f84a4f5d516eb268963779ca80320d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.2",
+>>>>>>> b7d5a60... Dockerised a base php templates
                 "psr/log": "^1|^2|^3",
                 "symfony/http-client-contracts": "^3",
                 "symfony/service-contracts": "^1.0|^2|^3"
@@ -667,7 +806,11 @@
             "description": "Provides powerful methods to fetch HTTP resources synchronously or asynchronously",
             "homepage": "https://symfony.com",
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/http-client/tree/v6.1.3"
+=======
+                "source": "https://github.com/symfony/http-client/tree/v6.0.11"
+>>>>>>> b7d5a60... Dockerised a base php templates
             },
             "funding": [
                 {
@@ -683,6 +826,7 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2022-07-28T13:40:41+00:00"
         },
         {
@@ -701,6 +845,26 @@
             },
             "require": {
                 "php": ">=8.1"
+=======
+            "time": "2022-07-28T13:39:17+00:00"
+        },
+        {
+            "name": "symfony/http-client-contracts",
+            "version": "v3.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/http-client-contracts.git",
+                "reference": "4184b9b63af1edaf35b6a7974c6f1f9f33294129"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/http-client-contracts/zipball/4184b9b63af1edaf35b6a7974c6f1f9f33294129",
+                "reference": "4184b9b63af1edaf35b6a7974c6f1f9f33294129",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.2"
+>>>>>>> b7d5a60... Dockerised a base php templates
             },
             "suggest": {
                 "symfony/http-client-implementation": ""
@@ -708,7 +872,11 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
+<<<<<<< HEAD
                     "dev-main": "3.1-dev"
+=======
+                    "dev-main": "3.0-dev"
+>>>>>>> b7d5a60... Dockerised a base php templates
                 },
                 "thanks": {
                     "name": "symfony/contracts",
@@ -718,10 +886,14 @@
             "autoload": {
                 "psr-4": {
                     "Symfony\\Contracts\\HttpClient\\": ""
+<<<<<<< HEAD
                 },
                 "exclude-from-classmap": [
                     "/Test/"
                 ]
+=======
+                }
+>>>>>>> b7d5a60... Dockerised a base php templates
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -748,7 +920,11 @@
                 "standards"
             ],
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/http-client-contracts/tree/v3.1.1"
+=======
+                "source": "https://github.com/symfony/http-client-contracts/tree/v3.0.2"
+>>>>>>> b7d5a60... Dockerised a base php templates
             },
             "funding": [
                 {
@@ -764,7 +940,11 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2022-04-22T07:30:54+00:00"
+=======
+            "time": "2022-04-12T16:11:42+00:00"
+>>>>>>> b7d5a60... Dockerised a base php templates
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -932,6 +1112,7 @@
             "time": "2022-05-24T11:49:31+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "symfony/service-contracts",
             "version": "v3.1.1",
             "source": {
@@ -954,10 +1135,28 @@
             },
             "suggest": {
                 "symfony/service-implementation": ""
+=======
+            "name": "symfony/polyfill-php81",
+            "version": "v1.26.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php81.git",
+                "reference": "13f6d1271c663dc5ae9fb843a8f16521db7687a1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php81/zipball/13f6d1271c663dc5ae9fb843a8f16521db7687a1",
+                "reference": "13f6d1271c663dc5ae9fb843a8f16521db7687a1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+>>>>>>> b7d5a60... Dockerised a base php templates
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
+<<<<<<< HEAD
                     "dev-main": "3.1-dev"
                 },
                 "thanks": {
@@ -971,6 +1170,24 @@
                 },
                 "exclude-from-classmap": [
                     "/Test/"
+=======
+                    "dev-main": "1.26-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php81\\": ""
+                },
+                "classmap": [
+                    "Resources/stubs"
+>>>>>>> b7d5a60... Dockerised a base php templates
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -987,6 +1204,7 @@
                     "homepage": "https://symfony.com/contributors"
                 }
             ],
+<<<<<<< HEAD
             "description": "Generic abstractions related to writing services",
             "homepage": "https://symfony.com",
             "keywords": [
@@ -999,6 +1217,18 @@
             ],
             "support": {
                 "source": "https://github.com/symfony/service-contracts/tree/v3.1.1"
+=======
+            "description": "Symfony polyfill backporting some PHP 8.1+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php81/tree/v1.26.0"
+>>>>>>> b7d5a60... Dockerised a base php templates
             },
             "funding": [
                 {
@@ -1014,6 +1244,7 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2022-05-30T19:18:58+00:00"
         },
         {
@@ -1035,11 +1266,42 @@
             },
             "suggest": {
                 "symfony/translation-implementation": ""
+=======
+            "time": "2022-05-24T11:49:31+00:00"
+        },
+        {
+            "name": "symfony/service-contracts",
+            "version": "v3.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/service-contracts.git",
+                "reference": "d78d39c1599bd1188b8e26bb341da52c3c6d8a66"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/d78d39c1599bd1188b8e26bb341da52c3c6d8a66",
+                "reference": "d78d39c1599bd1188b8e26bb341da52c3c6d8a66",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.2",
+                "psr/container": "^2.0"
+            },
+            "conflict": {
+                "ext-psr": "<1.1|>=2"
+            },
+            "suggest": {
+                "symfony/service-implementation": ""
+>>>>>>> b7d5a60... Dockerised a base php templates
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
+<<<<<<< HEAD
                     "dev-main": "3.1-dev"
+=======
+                    "dev-main": "3.0-dev"
+>>>>>>> b7d5a60... Dockerised a base php templates
                 },
                 "thanks": {
                     "name": "symfony/contracts",
@@ -1048,11 +1310,16 @@
             },
             "autoload": {
                 "psr-4": {
+<<<<<<< HEAD
                     "Symfony\\Contracts\\Translation\\": ""
                 },
                 "exclude-from-classmap": [
                     "/Test/"
                 ]
+=======
+                    "Symfony\\Contracts\\Service\\": ""
+                }
+>>>>>>> b7d5a60... Dockerised a base php templates
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1068,7 +1335,11 @@
                     "homepage": "https://symfony.com/contributors"
                 }
             ],
+<<<<<<< HEAD
             "description": "Generic abstractions related to translation",
+=======
+            "description": "Generic abstractions related to writing services",
+>>>>>>> b7d5a60... Dockerised a base php templates
             "homepage": "https://symfony.com",
             "keywords": [
                 "abstractions",
@@ -1079,7 +1350,11 @@
                 "standards"
             ],
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/translation-contracts/tree/v3.1.1"
+=======
+                "source": "https://github.com/symfony/service-contracts/tree/v3.0.2"
+>>>>>>> b7d5a60... Dockerised a base php templates
             },
             "funding": [
                 {
@@ -1095,6 +1370,7 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2022-06-27T17:24:16+00:00"
         },
         {
@@ -1221,6 +1497,26 @@
             },
             "require": {
                 "php": ">=8.1",
+=======
+            "time": "2022-05-30T19:17:58+00:00"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "v6.0.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "f41d702439aa1ee8db78a711d1822e73073eecbf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/f41d702439aa1ee8db78a711d1822e73073eecbf",
+                "reference": "f41d702439aa1ee8db78a711d1822e73073eecbf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.2",
+>>>>>>> b7d5a60... Dockerised a base php templates
                 "symfony/polyfill-ctype": "^1.8"
             },
             "conflict": {
@@ -1261,7 +1557,11 @@
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/yaml/tree/v6.1.3"
+=======
+                "source": "https://github.com/symfony/yaml/tree/v6.0.11"
+>>>>>>> b7d5a60... Dockerised a base php templates
             },
             "funding": [
                 {
@@ -1277,7 +1577,11 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2022-07-20T14:45:06+00:00"
+=======
+            "time": "2022-07-20T14:06:08+00:00"
+>>>>>>> b7d5a60... Dockerised a base php templates
         }
     ],
     "packages-dev": [
@@ -1460,6 +1764,9 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
+<<<<<<< HEAD
+                    "Composer\\XdebugHandler\\": "src"
+=======
                     "Composer\\XdebugHandler\\": "src"
                 }
             },
@@ -1498,6 +1805,112 @@
                 }
             ],
             "time": "2022-02-24T20:20:32+00:00"
+        },
+        {
+            "name": "doctrine/annotations",
+            "version": "1.13.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/annotations.git",
+                "reference": "648b0343343565c4a056bfc8392201385e8d89f0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/648b0343343565c4a056bfc8392201385e8d89f0",
+                "reference": "648b0343343565c4a056bfc8392201385e8d89f0",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/lexer": "1.*",
+                "ext-tokenizer": "*",
+                "php": "^7.1 || ^8.0",
+                "psr/cache": "^1 || ^2 || ^3"
+            },
+            "require-dev": {
+                "doctrine/cache": "^1.11 || ^2.0",
+                "doctrine/coding-standard": "^6.0 || ^8.1",
+                "phpstan/phpstan": "^1.4.10 || ^1.8.0",
+                "phpunit/phpunit": "^7.5 || ^8.0 || ^9.1.5",
+                "symfony/cache": "^4.4 || ^5.2",
+                "vimeo/psalm": "^4.10"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\Annotations\\": "lib/Doctrine/Common/Annotations"
+>>>>>>> b7d5a60... Dockerised a base php templates
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+<<<<<<< HEAD
+                    "name": "John Stevenson",
+                    "email": "john-stevenson@blueyonder.co.uk"
+                }
+            ],
+            "description": "Restarts a process without Xdebug.",
+            "keywords": [
+                "Xdebug",
+                "performance"
+            ],
+            "support": {
+                "irc": "irc://irc.freenode.org/composer",
+                "issues": "https://github.com/composer/xdebug-handler/issues",
+                "source": "https://github.com/composer/xdebug-handler/tree/2.0.5"
+            },
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/composer",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-02-24T20:20:32+00:00"
+=======
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "Docblock Annotations Parser",
+            "homepage": "https://www.doctrine-project.org/projects/annotations.html",
+            "keywords": [
+                "annotations",
+                "docblock",
+                "parser"
+            ],
+            "support": {
+                "issues": "https://github.com/doctrine/annotations/issues",
+                "source": "https://github.com/doctrine/annotations/tree/1.13.3"
+            },
+            "time": "2022-07-02T10:48:51+00:00"
+>>>>>>> b7d5a60... Dockerised a base php templates
         },
         {
             "name": "doctrine/instantiator",
@@ -1570,6 +1983,85 @@
             "time": "2022-03-03T08:28:38+00:00"
         },
         {
+<<<<<<< HEAD
+=======
+            "name": "doctrine/lexer",
+            "version": "1.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/lexer.git",
+                "reference": "c268e882d4dbdd85e36e4ad69e02dc284f89d229"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/c268e882d4dbdd85e36e4ad69e02dc284f89d229",
+                "reference": "c268e882d4dbdd85e36e4ad69e02dc284f89d229",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1 || ^8.0"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^9.0",
+                "phpstan/phpstan": "^1.3",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
+                "vimeo/psalm": "^4.11"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\Lexer\\": "lib/Doctrine/Common/Lexer"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "PHP Doctrine Lexer parser library that can be used in Top-Down, Recursive Descent Parsers.",
+            "homepage": "https://www.doctrine-project.org/projects/lexer.html",
+            "keywords": [
+                "annotations",
+                "docblock",
+                "lexer",
+                "parser",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/doctrine/lexer/issues",
+                "source": "https://github.com/doctrine/lexer/tree/1.2.3"
+            },
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Flexer",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-02-28T11:07:21+00:00"
+        },
+        {
+>>>>>>> b7d5a60... Dockerised a base php templates
             "name": "friendsofphp/php-cs-fixer",
             "version": "v3.4.0",
             "source": {
@@ -2585,6 +3077,58 @@
             "time": "2020-12-04T05:05:53+00:00"
         },
         {
+<<<<<<< HEAD
+=======
+            "name": "psr/cache",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/cache.git",
+                "reference": "aa5030cfa5405eccfdcb1083ce040c2cb8d253bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/cache/zipball/aa5030cfa5405eccfdcb1083ce040c2cb8d253bf",
+                "reference": "aa5030cfa5405eccfdcb1083ce040c2cb8d253bf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Cache\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for caching libraries",
+            "keywords": [
+                "cache",
+                "psr",
+                "psr-6"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/cache/tree/3.0.0"
+            },
+            "time": "2021-02-03T23:26:27+00:00"
+        },
+        {
+>>>>>>> b7d5a60... Dockerised a base php templates
             "name": "psr/event-dispatcher",
             "version": "1.0.0",
             "source": {
@@ -3600,6 +4144,7 @@
         },
         {
             "name": "symfony/console",
+<<<<<<< HEAD
             "version": "v6.1.3",
             "source": {
                 "type": "git",
@@ -3615,6 +4160,22 @@
             "require": {
                 "php": ">=8.1",
                 "symfony/deprecation-contracts": "^2.1|^3",
+=======
+            "version": "v6.0.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/console.git",
+                "reference": "09b8e50f09bf0e5bbde9b61b19d7f53751114725"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/console/zipball/09b8e50f09bf0e5bbde9b61b19d7f53751114725",
+                "reference": "09b8e50f09bf0e5bbde9b61b19d7f53751114725",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.2",
+>>>>>>> b7d5a60... Dockerised a base php templates
                 "symfony/polyfill-mbstring": "~1.0",
                 "symfony/service-contracts": "^1.1|^2|^3",
                 "symfony/string": "^5.4|^6.0"
@@ -3676,7 +4237,11 @@
                 "terminal"
             ],
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/console/tree/v6.1.3"
+=======
+                "source": "https://github.com/symfony/console/tree/v6.0.11"
+>>>>>>> b7d5a60... Dockerised a base php templates
             },
             "funding": [
                 {
@@ -3692,6 +4257,7 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2022-07-22T14:17:57+00:00"
         },
         {
@@ -3710,6 +4276,26 @@
             },
             "require": {
                 "php": ">=8.1",
+=======
+            "time": "2022-07-22T14:17:38+00:00"
+        },
+        {
+            "name": "symfony/event-dispatcher",
+            "version": "v6.0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/event-dispatcher.git",
+                "reference": "5c85b58422865d42c6eb46f7693339056db098a8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/5c85b58422865d42c6eb46f7693339056db098a8",
+                "reference": "5c85b58422865d42c6eb46f7693339056db098a8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.2",
+>>>>>>> b7d5a60... Dockerised a base php templates
                 "symfony/event-dispatcher-contracts": "^2|^3"
             },
             "conflict": {
@@ -3759,7 +4345,11 @@
             "description": "Provides tools that allow your application components to communicate with each other by dispatching events and listening to them",
             "homepage": "https://symfony.com",
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/event-dispatcher/tree/v6.1.0"
+=======
+                "source": "https://github.com/symfony/event-dispatcher/tree/v6.0.9"
+>>>>>>> b7d5a60... Dockerised a base php templates
             },
             "funding": [
                 {
@@ -3775,6 +4365,7 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2022-05-05T16:51:07+00:00"
         },
         {
@@ -3793,6 +4384,26 @@
             },
             "require": {
                 "php": ">=8.1",
+=======
+            "time": "2022-05-05T16:45:52+00:00"
+        },
+        {
+            "name": "symfony/event-dispatcher-contracts",
+            "version": "v3.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/event-dispatcher-contracts.git",
+                "reference": "7bc61cc2db649b4637d331240c5346dcc7708051"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/7bc61cc2db649b4637d331240c5346dcc7708051",
+                "reference": "7bc61cc2db649b4637d331240c5346dcc7708051",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.2",
+>>>>>>> b7d5a60... Dockerised a base php templates
                 "psr/event-dispatcher": "^1"
             },
             "suggest": {
@@ -3801,7 +4412,11 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
+<<<<<<< HEAD
                     "dev-main": "3.1-dev"
+=======
+                    "dev-main": "3.0-dev"
+>>>>>>> b7d5a60... Dockerised a base php templates
                 },
                 "thanks": {
                     "name": "symfony/contracts",
@@ -3838,7 +4453,11 @@
                 "standards"
             ],
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/event-dispatcher-contracts/tree/v3.1.1"
+=======
+                "source": "https://github.com/symfony/event-dispatcher-contracts/tree/v3.0.2"
+>>>>>>> b7d5a60... Dockerised a base php templates
             },
             "funding": [
                 {
@@ -3854,6 +4473,7 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2022-02-25T11:15:52+00:00"
         },
         {
@@ -3875,6 +4495,26 @@
             },
             "require-dev": {
                 "symfony/filesystem": "^6.0"
+=======
+            "time": "2022-01-02T09:55:41+00:00"
+        },
+        {
+            "name": "symfony/finder",
+            "version": "v6.0.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/finder.git",
+                "reference": "09cb683ba5720385ea6966e5e06be2a34f2568b1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/09cb683ba5720385ea6966e5e06be2a34f2568b1",
+                "reference": "09cb683ba5720385ea6966e5e06be2a34f2568b1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.2"
+>>>>>>> b7d5a60... Dockerised a base php templates
             },
             "type": "library",
             "autoload": {
@@ -3902,7 +4542,11 @@
             "description": "Finds files and directories via an intuitive fluent interface",
             "homepage": "https://symfony.com",
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/finder/tree/v6.1.3"
+=======
+                "source": "https://github.com/symfony/finder/tree/v6.0.11"
+>>>>>>> b7d5a60... Dockerised a base php templates
             },
             "funding": [
                 {
@@ -3918,6 +4562,7 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2022-07-29T07:42:06+00:00"
         },
         {
@@ -3936,6 +4581,26 @@
             },
             "require": {
                 "php": ">=8.1",
+=======
+            "time": "2022-07-29T07:39:48+00:00"
+        },
+        {
+            "name": "symfony/options-resolver",
+            "version": "v6.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/options-resolver.git",
+                "reference": "51f7006670febe4cbcbae177cbffe93ff833250d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/51f7006670febe4cbcbae177cbffe93ff833250d",
+                "reference": "51f7006670febe4cbcbae177cbffe93ff833250d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.2",
+>>>>>>> b7d5a60... Dockerised a base php templates
                 "symfony/deprecation-contracts": "^2.1|^3"
             },
             "type": "library",
@@ -3969,7 +4634,11 @@
                 "options"
             ],
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/options-resolver/tree/v6.1.0"
+=======
+                "source": "https://github.com/symfony/options-resolver/tree/v6.0.3"
+>>>>>>> b7d5a60... Dockerised a base php templates
             },
             "funding": [
                 {
@@ -3985,7 +4654,11 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2022-02-25T11:15:52+00:00"
+=======
+            "time": "2022-01-02T09:55:41+00:00"
+>>>>>>> b7d5a60... Dockerised a base php templates
         },
         {
             "name": "symfony/polyfill-intl-grapheme",
@@ -4236,6 +4909,7 @@
             "time": "2022-05-10T07:21:04+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "symfony/polyfill-php81",
             "version": "v1.26.0",
             "source": {
@@ -4330,6 +5004,23 @@
             },
             "require": {
                 "php": ">=8.1"
+=======
+            "name": "symfony/process",
+            "version": "v6.0.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/process.git",
+                "reference": "44270a08ccb664143dede554ff1c00aaa2247a43"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/process/zipball/44270a08ccb664143dede554ff1c00aaa2247a43",
+                "reference": "44270a08ccb664143dede554ff1c00aaa2247a43",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.2"
+>>>>>>> b7d5a60... Dockerised a base php templates
             },
             "type": "library",
             "autoload": {
@@ -4357,7 +5048,11 @@
             "description": "Executes commands in sub-processes",
             "homepage": "https://symfony.com",
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/process/tree/v6.1.3"
+=======
+                "source": "https://github.com/symfony/process/tree/v6.0.11"
+>>>>>>> b7d5a60... Dockerised a base php templates
             },
             "funding": [
                 {
@@ -4373,6 +5068,7 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2022-06-27T17:24:16+00:00"
         },
         {
@@ -4391,6 +5087,26 @@
             },
             "require": {
                 "php": ">=8.1",
+=======
+            "time": "2022-06-27T17:10:44+00:00"
+        },
+        {
+            "name": "symfony/stopwatch",
+            "version": "v6.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/stopwatch.git",
+                "reference": "f2c1780607ec6502f2121d9729fd8150a655d337"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/stopwatch/zipball/f2c1780607ec6502f2121d9729fd8150a655d337",
+                "reference": "f2c1780607ec6502f2121d9729fd8150a655d337",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.2",
+>>>>>>> b7d5a60... Dockerised a base php templates
                 "symfony/service-contracts": "^1|^2|^3"
             },
             "type": "library",
@@ -4419,7 +5135,11 @@
             "description": "Provides a way to profile code",
             "homepage": "https://symfony.com",
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/stopwatch/tree/v6.1.0"
+=======
+                "source": "https://github.com/symfony/stopwatch/tree/v6.0.5"
+>>>>>>> b7d5a60... Dockerised a base php templates
             },
             "funding": [
                 {
@@ -4435,6 +5155,7 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2022-02-25T11:15:52+00:00"
         },
         {
@@ -4453,6 +5174,26 @@
             },
             "require": {
                 "php": ">=8.1",
+=======
+            "time": "2022-02-21T17:15:17+00:00"
+        },
+        {
+            "name": "symfony/string",
+            "version": "v6.0.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/string.git",
+                "reference": "042b6bf0f6ccca6d456a0572eb788cfb8b1ff809"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/string/zipball/042b6bf0f6ccca6d456a0572eb788cfb8b1ff809",
+                "reference": "042b6bf0f6ccca6d456a0572eb788cfb8b1ff809",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.2",
+>>>>>>> b7d5a60... Dockerised a base php templates
                 "symfony/polyfill-ctype": "~1.8",
                 "symfony/polyfill-intl-grapheme": "~1.0",
                 "symfony/polyfill-intl-normalizer": "~1.0",
@@ -4504,7 +5245,11 @@
                 "utf8"
             ],
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/string/tree/v6.1.3"
+=======
+                "source": "https://github.com/symfony/string/tree/v6.0.11"
+>>>>>>> b7d5a60... Dockerised a base php templates
             },
             "funding": [
                 {
@@ -4520,6 +5265,7 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2022-07-27T15:50:51+00:00"
         },
         {
@@ -4538,6 +5284,26 @@
             },
             "require": {
                 "php": ">=8.1",
+=======
+            "time": "2022-07-27T15:50:26+00:00"
+        },
+        {
+            "name": "symfony/var-dumper",
+            "version": "v6.0.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/var-dumper.git",
+                "reference": "2672bdc01c1971e3d8879ce153ec4c3621be5f07"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/2672bdc01c1971e3d8879ce153ec4c3621be5f07",
+                "reference": "2672bdc01c1971e3d8879ce153ec4c3621be5f07",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.2",
+>>>>>>> b7d5a60... Dockerised a base php templates
                 "symfony/polyfill-mbstring": "~1.0"
             },
             "conflict": {
@@ -4592,7 +5358,11 @@
                 "dump"
             ],
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/var-dumper/tree/v6.1.3"
+=======
+                "source": "https://github.com/symfony/var-dumper/tree/v6.0.11"
+>>>>>>> b7d5a60... Dockerised a base php templates
             },
             "funding": [
                 {
@@ -4608,7 +5378,11 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2022-07-20T13:46:29+00:00"
+=======
+            "time": "2022-07-20T13:45:53+00:00"
+>>>>>>> b7d5a60... Dockerised a base php templates
         },
         {
             "name": "theseer/tokenizer",
