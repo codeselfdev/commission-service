@@ -1,0 +1,15 @@
+deposit:
+  commission: 0.03
+
+withdraw:
+  private:
+    commission: 0.3
+    free_of_charge:
+      amount: 1000
+      count: 3
+
+  business:
+    commission: 0.5
+
+default:
+  currency: EUR

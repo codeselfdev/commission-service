@@ -2,8 +2,9 @@ services:
   _defaults:
     autowire: true      # Automatically injects dependencies in your services.
 
-  Commission\Calculator\:
-    resource: 'src/*'
+  Commission\Calculation\:
+    resource: '../src/*'
 
-  Commission\Calculator\Application:
+  Commission\Calculation\Application:
     public: true
+
