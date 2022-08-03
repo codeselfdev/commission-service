@@ -27,6 +27,7 @@ If you use docker then you don't need PHP and Composer installed locally. From r
 cd docker
 docker-compose build
 docker-compose up -d
+docker-compose exec commission-calculator-app composer install
 docker-compose exec commission-calculator-app php script.php input.csv
 docker-compose exec commission-calculator-app composer test
 docker-compose exec commission-calculator-app php vendor/bin/phpunit tests
