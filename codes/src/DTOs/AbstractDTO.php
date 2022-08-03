@@ -7,6 +7,11 @@ use ReflectionProperty;
 
 abstract class AbstractDTO implements DTOInterface
 {
+    /**
+     * To reftect all property for set/get whoever use DTO
+     *
+     * @param array $parameters
+     */
     public function __construct(array $parameters = [])
     {
         $class = new ReflectionClass(static::class);
