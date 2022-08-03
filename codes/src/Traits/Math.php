@@ -21,7 +21,7 @@ trait Math
     /**
      * getting all value by 2 decimal point.
      */
-    public static function to2DecimalPoint(float $value): float
+    public static function to2DecimalPoint(float $value): string
     {
         return sprintf('%.2f', $value);
     }
