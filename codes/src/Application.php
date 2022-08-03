@@ -4,28 +4,51 @@ declare(strict_types=1);
 
 namespace Commission\Calculation;
 
+use Commission\Calculation\Configs\ConfigInterface;
+use Commission\Calculation\Currency\CurrencyExchange;
 use Commission\Calculation\DTOs\TransactionDTO;
 use Commission\Calculation\Exception\InputValidationException;
 use Commission\Calculation\Exceptions\InputValidationException as ExceptionsInputValidationException;
+use Commission\Calculation\Operations\OperationServiceInterface;
+use Commission\Calculation\Currency\CurrencyExchangeInterface;
+use Commission\Calculation\Users\Repository\UserRepositoryInterface;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
 class Application
 {
+    /**
+     * Injecticting dependant objects into app
+     *
+     * @param CurrencyExchangeInterface $currency
+     * @param OperationServiceInterface $operationService
+     * @param UserRepositoryInterface $userRepo
+     * @param ConfigInterface $config
+     */
     public function __construct(
+        private CurrencyExchangeInterface $currency,
+        private OperationServiceInterface $operationService,
+        private UserRepositoryInterface $userRepo,
+        private ConfigInterface $config,
     ) {
     }
 
     /**
+     * Carete app which containerised all services
      *
-     * @throws Exception
+     * @return Application
      */
-    public static function create(): Application
+    public static function create(bool $fromTestEnvironment): Application
     {
         $container = new ContainerBuilder();
         $loader = new YamlFileLoader($container, new FileLocator(dirname(__DIR__, 1). '/config'));
         $loader->load('services.yaml');
+
+        if ($fromTestEnvironment) {
+            $container->getDefinition(CurrencyExchange::class)
+                ->setFactory([CurrencyExchange::class, 'mockCurrencyExchangeLoader']);
+        }
 
         $container->compile();
 
@@ -33,22 +56,27 @@ class Application
     }
 
     /**
+     * calculate commission fee from a operation
+     *
+     * @param TransactionDTO $transaction
+     * @return string
      * @throws InputValidationException
      */
     public function getCommissionFees(TransactionDTO $transaction): string
     {
         $transaction->validate();
-        // $user = $this->userService->findOrAddNew($userID, $userType);
-        // $precision = $this->currencyService->getPrecision($amount);
-        // $currency = $this->currencyService->findOrAddNew($currency, $precision);
+        $amountInBaseCurrency = $this->currency->getAmountInBasePrice($transaction->amount, $transaction->currency);
+        $user = $this->userRepo->findOrNewUser($transaction->user_id, $transaction->client_type, $this->config);
+        $operation = $this->operationService->addNew($transaction->operation_type, (float)$amountInBaseCurrency, $transaction->date, $user);
 
-        // $operation = $this->operationService->addNew($date, $type, $amount, $currency, $user);
-        // return $this->currencyService->format($operation->getCurrency(), $operation->getFee());
-
-        return '9';
+        return $this->currency->getAmountFromBaseCurrencyToForeignCurrency($operation->getCommissionFees(), $transaction->currency);
     }
 
     /**
+     * Parse csv file content in multi line and print line by line calculate commission fee
+     *
+     * @param string $csv_path
+     * @return string
      * @throws InputValidationException
      */
     public function parse(string $csv_path): string
