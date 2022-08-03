@@ -11,10 +11,10 @@ use Commission\Calculation\Operations\OperationInterface;
 final class BusinessStrategy implements UserTypeStrategyInterface
 {
     /**
-     * Constructing business strategy
+     * Constructing business strategy.
      *
      * @param OperationInterface $operation
-     * @param ConfigInterface $config
+     * @param ConfigInterface    $config
      */
     public function __construct(
         private OperationInterface $operation,
@@ -23,9 +23,7 @@ final class BusinessStrategy implements UserTypeStrategyInterface
     }
 
     /**
-     * Get chargable value
-     *
-     * @return float
+     * Get chargable value.
      */
     public function getFee(): float
     {
@@ -33,9 +31,7 @@ final class BusinessStrategy implements UserTypeStrategyInterface
     }
 
     /**
-     * Calculate commission fee
-     *
-     * @return float
+     * Calculate commission fee.
      */
     public function calculate(): float
     {
@@ -43,9 +39,7 @@ final class BusinessStrategy implements UserTypeStrategyInterface
     }
 
     /**
-     * Get user's type
-     *
-     * @return string
+     * Get user's type.
      */
     public function getType(): string
     {

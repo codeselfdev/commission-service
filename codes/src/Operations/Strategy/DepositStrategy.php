@@ -11,10 +11,10 @@ use Commission\Calculation\Operations\OperationInterface;
 final class DepositStrategy implements OperationStrategyInterface
 {
     /**
-     * Constructing diposit strategy
+     * Constructing diposit strategy.
      *
      * @param OperationInterface $operation
-     * @param ConfigInterface $config
+     * @param ConfigInterface    $config
      */
     public function __construct(
         private OperationInterface $operation,
@@ -23,9 +23,7 @@ final class DepositStrategy implements OperationStrategyInterface
     }
 
     /**
-     * Get chargable amount
-     *
-     * @return float
+     * Get chargable amount.
      */
     public function getAmountForCharge(): float
     {
@@ -33,19 +31,15 @@ final class DepositStrategy implements OperationStrategyInterface
     }
 
     /**
-     * Calculate commission fee
-     *
-     * @return float
+     * Calculate commission fee.
      */
     public function getCommissionFee(): float
     {
-        return ($this->config->getDepositCommission() * $this->getAmountForCharge())/100;
+        return ($this->config->getDepositCommission() * $this->getAmountForCharge()) / 100;
     }
 
     /**
-     * Get operation type
-     *
-     * @return string
+     * Get operation type.
      */
     public function getType(): string
     {

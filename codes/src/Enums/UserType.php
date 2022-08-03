@@ -1,28 +1,23 @@
 <?php
 
-namespace Commission\Calculation\Enums;
+declare(strict_types=1);
 
-use Commission\Calculation\Traits\EnumToArray;
+namespace Commission\Calculation\Enums;
 
 enum UserType
 {
-    /**
+    /*
      * To avail a function which return all enum cases
      */
-    use EnumToArray;
 
     case private;
     case business;
-
     /**
-     * To get value from enum
-     *
-     * @return string
+     * To get value from enum.
      */
     public function val(): string
     {
-        return match($this)
-        {
+        return match ($this) {
             UserType::private => 'private',
             UserType::business => 'business',
         };

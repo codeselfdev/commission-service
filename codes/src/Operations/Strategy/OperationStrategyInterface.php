@@ -7,23 +7,17 @@ namespace Commission\Calculation\Operations\Strategy;
 interface OperationStrategyInterface
 {
     /**
-     * Amount to be charge
-     *
-     * @return float
+     * Amount to be charge.
      */
     public function getAmountForCharge(): float;
 
     /**
-     * Get commission fee from user's strategy
-     *
-     * @return float
+     * Get commission fee from user's strategy.
      */
     public function getCommissionFee(): float;
 
     /**
-     * get user type
-     *
-     * @return string
+     * get user type.
      */
     public function getType(): string;
 }

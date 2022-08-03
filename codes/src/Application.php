@@ -6,11 +6,11 @@ namespace Commission\Calculation;
 
 use Commission\Calculation\Configs\ConfigInterface;
 use Commission\Calculation\Currency\CurrencyExchange;
+use Commission\Calculation\Currency\CurrencyExchangeInterface;
 use Commission\Calculation\DTOs\TransactionDTO;
 use Commission\Calculation\Exception\InputValidationException;
 use Commission\Calculation\Exceptions\InputValidationException as ExceptionsInputValidationException;
 use Commission\Calculation\Operations\OperationServiceInterface;
-use Commission\Calculation\Currency\CurrencyExchangeInterface;
 use Commission\Calculation\Users\Repository\UserRepositoryInterface;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -19,12 +19,12 @@ use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 class Application
 {
     /**
-     * Injecticting dependant objects into app
+     * Injecticting dependant objects into app.
      *
      * @param CurrencyExchangeInterface $currency
      * @param OperationServiceInterface $operationService
-     * @param UserRepositoryInterface $userRepo
-     * @param ConfigInterface $config
+     * @param UserRepositoryInterface   $userRepo
+     * @param ConfigInterface           $config
      */
     public function __construct(
         private CurrencyExchangeInterface $currency,
@@ -35,14 +35,12 @@ class Application
     }
 
     /**
-     * Carete app which containerised all services
-     *
-     * @return Application
+     * Carete app which containerised all services.
      */
     public static function create(bool $fromTestEnvironment): Application
     {
         $container = new ContainerBuilder();
-        $loader = new YamlFileLoader($container, new FileLocator(dirname(__DIR__, 1). '/config'));
+        $loader = new YamlFileLoader($container, new FileLocator(dirname(__DIR__, 1).'/config'));
         $loader->load('services.yaml');
 
         if ($fromTestEnvironment) {
@@ -56,10 +54,8 @@ class Application
     }
 
     /**
-     * calculate commission fee from a operation
+     * calculate commission fee from a operation.
      *
-     * @param TransactionDTO $transaction
-     * @return string
      * @throws InputValidationException
      */
     public function getCommissionFees(TransactionDTO $transaction): string
@@ -67,23 +63,21 @@ class Application
         $transaction->validate();
         $amountInBaseCurrency = $this->currency->getAmountInBasePrice($transaction->amount, $transaction->currency);
         $user = $this->userRepo->findOrNewUser($transaction->user_id, $transaction->client_type, $this->config);
-        $operation = $this->operationService->addNew($transaction->operation_type, (float)$amountInBaseCurrency, $transaction->date, $user);
+        $operation = $this->operationService->addNew($transaction->operation_type, (float) $amountInBaseCurrency, $transaction->date, $user);
 
         return $this->currency->getAmountFromBaseCurrencyToForeignCurrency($operation->getCommissionFees(), $transaction->currency);
     }
 
     /**
-     * Parse csv file content in multi line and print line by line calculate commission fee
+     * Parse csv file content in multi line and print line by line calculate commission fee.
      *
-     * @param string $csv_path
-     * @return string
      * @throws InputValidationException
      */
     public function parse(string $csv_path): string
     {
         $result = [];
 
-        $content = file_get_contents(dirname(__DIR__, 1). "/".$csv_path);
+        $content = file_get_contents(dirname(__DIR__, 1).'/'.$csv_path);
         $lines = explode(PHP_EOL, $content);
 
         foreach ($lines as $line) {
@@ -95,7 +89,7 @@ class Application
 
             [$date, $userID, $userType, $type, $amount, $currency] = $data;
 
-            $transaction = new TransactionDTO($date, (int)$userID, $userType, $type, (float)$amount, $currency);
+            $transaction = new TransactionDTO($date, (int) $userID, $userType, $type, (float) $amount, $currency);
 
             $result[] = $this->getCommissionFees($transaction);
         }

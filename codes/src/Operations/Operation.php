@@ -10,21 +10,19 @@ use Commission\Calculation\Users\UserInterface;
 class Operation implements OperationInterface
 {
     /**
-     * Previouc operation of this operation's user
-     *
-     * @var OperationInterface|null
+     * Previouc operation of this operation's user.
      */
     private ?OperationInterface $previous;
 
     /**
-     * Constructing operation
+     * Constructing operation.
      *
-     * @param string $date
-     * @param string $type
-     * @param float $amount
+     * @param string        $date
+     * @param string        $type
+     * @param float         $amount
      * @param UserInterface $user
      */
-    function __construct(
+    public function __construct(
         private string $date,
         private string $type,
         private float $amount,
@@ -34,9 +32,7 @@ class Operation implements OperationInterface
     }
 
     /**
-     * Get date of operation
-     *
-     * @return string
+     * Get date of operation.
      */
     public function getDate(): string
     {
@@ -44,9 +40,7 @@ class Operation implements OperationInterface
     }
 
     /**
-     * Get user instance of this operation
-     *
-     * @return UserInterface
+     * Get user instance of this operation.
      */
     public function getUser(): UserInterface
     {
@@ -54,9 +48,7 @@ class Operation implements OperationInterface
     }
 
     /**
-     * get operation type
-     *
-     * @return string
+     * get operation type.
      */
     public function getType(): string
     {
@@ -64,9 +56,7 @@ class Operation implements OperationInterface
     }
 
     /**
-     * Get previous operation of user
-     *
-     * @return OperationInterface|null
+     * Get previous operation of user.
      */
     public function getPrevious(): ?OperationInterface
     {
@@ -74,9 +64,7 @@ class Operation implements OperationInterface
     }
 
     /**
-     * Get operation value
-     *
-     * @return float
+     * Get operation value.
      */
     public function getAmount(): float
     {
@@ -84,9 +72,7 @@ class Operation implements OperationInterface
     }
 
     /**
-     * Operation value to be charged from strategy wise policy
-     *
-     * @return float
+     * Operation value to be charged from strategy wise policy.
      */
     public function getAmountForCharge(): float
     {
@@ -94,9 +80,7 @@ class Operation implements OperationInterface
     }
 
     /**
-     * Get commission fee from strategy wise policy
-     *
-     * @return float
+     * Get commission fee from strategy wise policy.
      */
     public function getCommissionFees(): float
     {
@@ -104,10 +88,7 @@ class Operation implements OperationInterface
     }
 
     /**
-     * Setting strategy of this operation
-     *
-     * @param OperationStrategyInterface $strategy
-     * @return self
+     * Setting strategy of this operation.
      */
     public function setStrategy(OperationStrategyInterface $strategy): self
     {
@@ -115,5 +96,4 @@ class Operation implements OperationInterface
 
         return $this;
     }
-
 }

@@ -6,7 +6,6 @@ namespace Commission\Calculation\Operations\Factory;
 
 use Commission\Calculation\Configs\ConfigInterface;
 use Commission\Calculation\Enums\OperationType;
-use Commission\Calculation\Operations\Exception\WrongOperationTypeException;
 use Commission\Calculation\Operations\OperationInterface;
 use Commission\Calculation\Operations\Strategy\DepositStrategy;
 use Commission\Calculation\Operations\Strategy\OperationStrategyInterface;
@@ -15,11 +14,7 @@ use Commission\Calculation\Operations\Strategy\WithdrawStrategy;
 class OperationStrategyFactory
 {
     /**
-     * Factory to create operation type wise strategy
-     *
-     * @param ConfigInterface $config
-     * @param OperationInterface $operation
-     * @return OperationStrategyInterface
+     * Factory to create operation type wise strategy.
      */
     public static function create(
         ConfigInterface $config,

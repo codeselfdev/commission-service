@@ -22,25 +22,21 @@ class Config implements ConfigInterface
     private const QUOTA = 'quota';
 
     /**
-     * where configs value from yml file
-     *
-     * @var array
+     * where configs value from yml file.
      */
     private array $params;
 
     /**
-     * Constructing config object from a yaml
+     * Constructing config object from a yaml.
      */
     public function __construct()
     {
-        $locator = new FileLocator(dirname(__DIR__, 2) . '/config');
+        $locator = new FileLocator(dirname(__DIR__, 2).'/config');
         $this->params = Yaml::parseFile($locator->locate('config.yaml'));
     }
 
     /**
-     * Create config instance from yaml
-     *
-     * @return ConfigInterface
+     * Create config instance from yaml.
      */
     public static function create(): ConfigInterface
     {
@@ -48,9 +44,7 @@ class Config implements ConfigInterface
     }
 
     /**
-     * Get deposit commission rate
-     *
-     * @return float
+     * Get deposit commission rate.
      */
     public function getDepositCommission(): float
     {
@@ -58,9 +52,7 @@ class Config implements ConfigInterface
     }
 
     /**
-     * Get commission rate for private user withdraw
-     *
-     * @return float
+     * Get commission rate for private user withdraw.
      */
     public function getWithdrawPrivateCommission(): float
     {
@@ -68,9 +60,7 @@ class Config implements ConfigInterface
     }
 
     /**
-     * Get free weekly transaction amount
-     *
-     * @return float
+     * Get free weekly transaction amount.
      */
     public function getWithdrawPrivateFreeOfChargeAmount(): float
     {
@@ -78,9 +68,7 @@ class Config implements ConfigInterface
     }
 
     /**
-     * Get default currency
-     *
-     * @return string
+     * Get default currency.
      */
     public function getDefaultCurrency(): string
     {
@@ -88,9 +76,7 @@ class Config implements ConfigInterface
     }
 
     /**
-     * Get default precision value
-     *
-     * @return integer
+     * Get default precision value.
      */
     public function getDefaultPrecision(): int
     {
@@ -98,9 +84,7 @@ class Config implements ConfigInterface
     }
 
     /**
-     * Get weekly private user withdraw operation quota
-     *
-     * @return integer
+     * Get weekly private user withdraw operation quota.
      */
     public function getWithdrawPrivateFreeOfChargeQuota(): int
     {
@@ -108,9 +92,7 @@ class Config implements ConfigInterface
     }
 
     /**
-     * Get bussiness withdraw operation commission rate
-     *
-     * @return float
+     * Get bussiness withdraw operation commission rate.
      */
     public function getWithdrawBusinessCommission(): float
     {

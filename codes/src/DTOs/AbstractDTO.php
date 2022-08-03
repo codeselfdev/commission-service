@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Commission\Calculation\DTOs;
 
 use ReflectionClass;
@@ -8,9 +10,7 @@ use ReflectionProperty;
 abstract class AbstractDTO implements DTOInterface
 {
     /**
-     * To reftect all property for set/get whoever use DTO
-     *
-     * @param array $parameters
+     * To reftect all property for set/get whoever use DTO.
      */
     public function __construct(array $parameters = [])
     {
@@ -23,9 +23,7 @@ abstract class AbstractDTO implements DTOInterface
     }
 
     /**
-     * Convert the object into Array
-     *
-     * @return array
+     * Convert the object into Array.
      */
     public function toArray(): array
     {

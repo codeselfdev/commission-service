@@ -1,58 +1,45 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Commission\Calculation\Traits;
 
 trait DateCalc
 {
     /**
-     * Get day no of a week
-     *
-     * @param string $date
-     * @return integer
+     * Get day no of a week.
      */
     public function getDayNo(string $date): int
     {
-        return (int)date('w', strtotime($date)) - 1;
+        return (int) date('w', strtotime($date)) - 1;
     }
 
     /**
-     * Get previous monday from a date
-     *
-     * @param string $date
-     * @return string
+     * Get previous monday from a date.
      */
     public function getWeekStartDate(string $date): string
     {
         $day = $this->getDayNo($date);
 
-
         return date('Y-m-d', strtotime('-'.$day.' days', strtotime($date)));
     }
 
     /**
-     * Get Nearest sunday from a date
-     *
-     * @param string $date
-     * @return string
+     * Get Nearest sunday from a date.
      */
-    public function getWeekEndDate( string $date): string
+    public function getWeekEndDate(string $date): string
     {
         $day = $this->getDayNo($date);
 
-        return date('Y-m-d', strtotime('+'.(6-$day).' days', strtotime($date)));
+        return date('Y-m-d', strtotime('+'.(6 - $day).' days', strtotime($date)));
     }
 
     /**
-     * Check if a date belongs to a same week or not
-     *
-     * @param string $previousDate
-     * @param string $date
-     * @return boolean
+     * Check if a date belongs to a same week or not.
      */
-    public function isDateBetweenWeek (string $previousDate, string $date): bool
+    public function isDateBetweenWeek(string $previousDate, string $date): bool
     {
-        if (($date >= $this->getWeekStartDate($previousDate)) && ($date <= $this->getWeekEndDate($previousDate)))
-        {
+        if (($date >= $this->getWeekStartDate($previousDate)) && ($date <= $this->getWeekEndDate($previousDate))) {
             return true;
         }
 

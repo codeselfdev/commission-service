@@ -12,17 +12,15 @@ use Commission\Calculation\Operations\OperationInterface;
 final class WithdrawStrategy implements OperationStrategyInterface
 {
     /**
-     * User type wise strategy (private|business)
-     *
-     * @var UserTypeStrategyInterface
+     * User type wise strategy (private|business).
      */
     private UserTypeStrategyInterface $strategy;
 
     /**
-     * Constructing withdraw strategy
+     * Constructing withdraw strategy.
      *
      * @param OperationInterface $operation
-     * @param ConfigInterface $config
+     * @param ConfigInterface    $config
      */
     public function __construct(
         private OperationInterface $operation,
@@ -32,9 +30,7 @@ final class WithdrawStrategy implements OperationStrategyInterface
     }
 
     /**
-     * Get operation value
-     *
-     * @return float
+     * Get operation value.
      */
     public function getAmountForCharge(): float
     {
@@ -42,7 +38,7 @@ final class WithdrawStrategy implements OperationStrategyInterface
     }
 
     /**
-     * create and set user type wise strategy set
+     * create and set user type wise strategy set.
      *
      * @return void
      */
@@ -58,9 +54,7 @@ final class WithdrawStrategy implements OperationStrategyInterface
     }
 
     /**
-     * Get commission fee from calculation on basis of defined strtegy
-     *
-     * @return float
+     * Get commission fee from calculation on basis of defined strtegy.
      */
     public function getCommissionFee(): float
     {
@@ -68,9 +62,7 @@ final class WithdrawStrategy implements OperationStrategyInterface
     }
 
     /**
-     * get operation type
-     *
-     * @return string
+     * get operation type.
      */
     public function getType(): string
     {

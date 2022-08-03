@@ -12,16 +12,16 @@ use Commission\Calculation\Users\UserInterface;
 
 final class PrivateStrategy implements UserTypeStrategyInterface
 {
-    /**
+    /*
      * using trait to avail some helper function
      */
     use DateCalc;
 
     /**
-     * Constructing strategy by user type
+     * Constructing strategy by user type.
      *
      * @param OperationInterface $operation
-     * @param ConfigInterface $config
+     * @param ConfigInterface    $config
      */
     public function __construct(
         private OperationInterface $operation,
@@ -30,19 +30,15 @@ final class PrivateStrategy implements UserTypeStrategyInterface
     }
 
     /**
-     * calculation logic for private user
-     *
-     * @return float
+     * calculation logic for private user.
      */
     public function calculate(): float
     {
-        return ($this->config->getWithdrawPrivateCommission() * $this->getFee())/ 100;
+        return ($this->config->getWithdrawPrivateCommission() * $this->getFee()) / 100;
     }
 
     /**
-     * Logic implemented here which will be chargable for commission
-     *
-     * @return float
+     * Logic implemented here which will be chargable for commission.
      */
     public function getFee(): float
     {
@@ -52,14 +48,13 @@ final class PrivateStrategy implements UserTypeStrategyInterface
 
         $previousOperation = $this->operation->getPrevious();
 
-        if ($previousOperation == null)
-        {
+        if ($previousOperation === null) {
             $user->setWeeklyTransactionQuota($weeklyQuotaConfig);
+
             return $this->amountChargedRule($user);
         }
 
-        if (!self::isDateBetweenWeek($previousOperation?->getDate(), $this->operation->getDate()))
-        {
+        if (!self::isDateBetweenWeek($previousOperation?->getDate(), $this->operation->getDate())) {
             $user->setWeeklyTransactionQuota($weeklyQuotaConfig);
         }
 
@@ -67,9 +62,7 @@ final class PrivateStrategy implements UserTypeStrategyInterface
     }
 
     /**
-     * Get user type
-     *
-     * @return string
+     * Get user type.
      */
     public function getType(): string
     {
@@ -77,35 +70,29 @@ final class PrivateStrategy implements UserTypeStrategyInterface
     }
 
     /**
-     * private user's chargable amount
-     *
-     * @param UserInterface $user
-     * @return float
+     * private user's chargable amount.
      */
     private function amountChargedRule(UserInterface $user): float
     {
         $freeAmount = $this->config->getWithdrawPrivateFreeOfChargeAmount();
         $weeklySum = $user->getWeeklyTransactionSum();
         $weeklyQuotaRemain = $user->getWeeklyTransactionQuota();
-        $amount =  $this->operation->getAmount();
+        $amount = $this->operation->getAmount();
 
         $user->removeWeeklyTransactionQuota();
 
         if (($weeklyQuotaRemain > 0)
             && (($weeklySum + $amount) > $freeAmount)
-            )
-        {
+            ) {
             $user->setWeeklyTransactionAmount(0.0);
             $user->resetWeeklyTransactionQuota();
 
-            return (($weeklySum + $amount) - $freeAmount);
-        } elseif(($weeklyQuotaRemain > 0) && ($weeklySum + $amount) <= $freeAmount)
-        {
+            return ($weeklySum + $amount) - $freeAmount;
+        } elseif (($weeklyQuotaRemain > 0) && ($weeklySum + $amount) <= $freeAmount) {
             $user->addWeeklyTransactionAmount($amount);
 
             return 0.0;
-        } else
-        {
+        } else {
             return $amount;
         }
     }

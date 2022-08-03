@@ -9,13 +9,7 @@ use Commission\Calculation\Users\UserInterface;
 interface OperationServiceInterface
 {
     /**
-     * Create new operation by service
-     *
-     * @param string $type
-     * @param float $amount
-     * @param string $date
-     * @param UserInterface $user
-     * @return OperationInterface
+     * Create new operation by service.
      */
     public function addNew(
         string $type,

@@ -6,13 +6,12 @@ namespace Commission\Calculation\Operations;
 
 use Commission\Calculation\Configs\ConfigInterface;
 use Commission\Calculation\Operations\Factory\OperationFactory;
-use Commission\Calculation\Operations\OperationServiceInterface;
 use Commission\Calculation\Users\UserInterface;
 
 class OperationService implements OperationServiceInterface
 {
     /**
-     * Construction with dependant service
+     * Construction with dependant service.
      *
      * @param ConfigInterface $config
      */
@@ -23,13 +22,7 @@ class OperationService implements OperationServiceInterface
 
     /**
      * Call for creating a operation
-     * Attaching newly created operation to belonging user
-     *
-     * @param string $type
-     * @param float $amount
-     * @param string $date
-     * @param UserInterface $user
-     * @return OperationInterface
+     * Attaching newly created operation to belonging user.
      */
     public function addNew(
         string $type,
@@ -37,11 +30,10 @@ class OperationService implements OperationServiceInterface
         string $date,
         UserInterface $user
     ): OperationInterface {
-
         $operation = OperationFactory::create(
             $date,
             $type,
-            (float)$amount,
+            (float) $amount,
             $user,
             $this->config
         );

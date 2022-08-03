@@ -7,23 +7,17 @@ namespace Commission\Calculation\Operations\Strategy;
 interface UserTypeStrategyInterface
 {
     /**
-     * Calculation policy will be here
-     *
-     * @return float
+     * Calculation policy will be here.
      */
     public function calculate(): float;
 
     /**
-     * Get operation value which is chargable by following rules
-     *
-     * @return float
+     * Get operation value which is chargable by following rules.
      */
     public function getfee(): float;
 
     /**
-     * Get strategy type
-     *
-     * @return string
+     * Get strategy type.
      */
     public function getType(): string;
 }

@@ -11,37 +11,29 @@ class User implements UserInterface
 {
     /**
      * Total weekly transaction amount before reaching free quota policy.
-     *
-     * @var float
      */
     private float $weeklyTransactedAmount = 0.0;
 
     /**
-     * remaining weekly transaction quota with default value 0
-     *
-     * @var integer
+     * remaining weekly transaction quota with default value 0.
      */
     private int $weeklyTransactedQuota = 0;
 
     /**
-     * User's operation history
-     *
-     * @var array
+     * User's operation history.
      */
     private array $operations = [];
 
     /**
-     * User's last transactioned operation
-     *
-     * @var OperationInterface|null
+     * User's last transactioned operation.
      */
     private ?OperationInterface $previousOperation = null;
 
     /**
-     * construction with dependant
+     * construction with dependant.
      *
-     * @param integer $id
-     * @param string $userType
+     * @param int                  $id
+     * @param string               $userType
      * @param ConfigInterface|null $config
      */
     public function __construct(
@@ -53,8 +45,7 @@ class User implements UserInterface
     }
 
     /**
-     * Function for getting user id
-     *
+     * Function for getting user id.
      *
      * @return int $id
      */
@@ -64,8 +55,7 @@ class User implements UserInterface
     }
 
     /**
-     * Function for getting user type
-     *
+     * Function for getting user type.
      *
      * @return string $userType
      */
@@ -75,8 +65,7 @@ class User implements UserInterface
     }
 
     /**
-     * Function for getting weekly operation sum
-     *
+     * Function for getting weekly operation sum.
      *
      * @return float $weeklyTransactedAmount
      */
@@ -86,11 +75,7 @@ class User implements UserInterface
     }
 
     /**
-     * Function add operation to a weekly operation array
-     *
-     * @param OperationInterface $operation
-     *
-     * @return void
+     * Function add operation to a weekly operation array.
      */
     public function addTransaction(OperationInterface $operation): void
     {
@@ -99,24 +84,19 @@ class User implements UserInterface
     }
 
     /**
-     * Set last transactioned operation to user
-     *
-     * @return void
+     * Set last transactioned operation to user.
      */
     public function setLastOperation(): void
     {
-        if(empty($this->operations))
-        {
+        if (empty($this->operations)) {
             $this->previousOperation = null;
         } else {
-            $this->previousOperation = $this->operations[count($this->operations)-1];
+            $this->previousOperation = $this->operations[count($this->operations) - 1];
         }
     }
 
     /**
-     * Getting user's last operation
-     *
-     * @return OperationInterface|null
+     * Getting user's last operation.
      */
     public function getLastOperation(): ?OperationInterface
     {
@@ -124,9 +104,7 @@ class User implements UserInterface
     }
 
     /**
-     * Getting remains weeekly transactioned quota
-     *
-     * @return integer
+     * Getting remains weeekly transactioned quota.
      */
     public function getWeeklyTransactionQuota(): int
     {
@@ -134,10 +112,7 @@ class User implements UserInterface
     }
 
     /**
-     * Summing operation value to weekly transactioned amount
-     *
-     * @param float $weeklyTransactedAmount
-     * @return void
+     * Summing operation value to weekly transactioned amount.
      */
     public function addWeeklyTransactionAmount(float $weeklyTransactedAmount): void
     {
@@ -145,10 +120,7 @@ class User implements UserInterface
     }
 
     /**
-     * Setting weekly transactioned amount
-     *
-     * @param float $weeklyTransactedAmount
-     * @return void
+     * Setting weekly transactioned amount.
      */
     public function setWeeklyTransactionAmount(float $weeklyTransactedAmount): void
     {
@@ -156,10 +128,7 @@ class User implements UserInterface
     }
 
     /**
-     * Setting remains weeekly transactioned quota
-     *
-     * @param integer $weeklyTransactedQuota
-     * @return void
+     * Setting remains weeekly transactioned quota.
      */
     public function setWeeklyTransactionQuota(int $weeklyTransactedQuota): void
     {
@@ -167,19 +136,15 @@ class User implements UserInterface
     }
 
     /**
-     * Reducing remains weeekly transactioned quota by 1
-     *
-     * @return void
+     * Reducing remains weeekly transactioned quota by 1.
      */
     public function removeWeeklyTransactionQuota(): void
     {
-        $this->weeklyTransactedQuota--;
+        --$this->weeklyTransactedQuota;
     }
 
     /**
-     * Resetting weekly transactioned amount to 0.0
-     *
-     * @return void
+     * Resetting weekly transactioned amount to 0.0.
      */
     public function resetWeeklyTransactionAmount(): void
     {
@@ -187,9 +152,7 @@ class User implements UserInterface
     }
 
     /**
-     * Resetin all remains weeekly transactioned quota to 0
-     *
-     * @return void
+     * Resetin all remains weeekly transactioned quota to 0.
      */
     public function resetWeeklyTransactionQuota(): void
     {

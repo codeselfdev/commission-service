@@ -28,9 +28,13 @@
         "symfony/var-dumper": "^6.0"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "bin-dir": "bin"
     },
     "scripts": {
-        "test": "phpunit --colors=always tests"
+        "phpunit": "phpunit tests",
+        "fix-cs": "php-cs-fixer fix",
+        "test-cs": "php-cs-fixer fix --dry-run -v",
+        "test": ["@phpunit", "@test-cs"]
     }
 }

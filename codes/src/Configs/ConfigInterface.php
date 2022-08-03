@@ -7,51 +7,37 @@ namespace Commission\Calculation\Configs;
 interface ConfigInterface
 {
     /**
-     * Get deposit commission rate
-     *
-     * @return float
+     * Get deposit commission rate.
      */
     public function getDepositCommission(): float;
 
     /**
-     * Get commission rate for private user withdraw
-     *
-     * @return float
+     * Get commission rate for private user withdraw.
      */
     public function getWithdrawPrivateCommission(): float;
 
     /**
-     * Get free weekly transaction amount
-     *
-     * @return float
+     * Get free weekly transaction amount.
      */
     public function getWithdrawPrivateFreeOfChargeAmount(): float;
 
     /**
-     * Get default currency
-     *
-     * @return string
+     * Get default currency.
      */
     public function getDefaultCurrency(): string;
 
     /**
-     * Get default precision value
-     *
-     * @return integer
+     * Get default precision value.
      */
     public function getDefaultPrecision(): int;
 
     /**
-     * Get weekly private user withdraw operation quota
-     *
-     * @return integer
+     * Get weekly private user withdraw operation quota.
      */
     public function getWithdrawPrivateFreeOfChargeQuota(): int;
 
     /**
-     * Get bussiness withdraw operation commission rate
-     *
-     * @return float
+     * Get bussiness withdraw operation commission rate.
      */
     public function getWithdrawBusinessCommission(): float;
 }

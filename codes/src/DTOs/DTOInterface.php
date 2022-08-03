@@ -7,9 +7,7 @@ namespace Commission\Calculation\DTOs;
 interface DTOInterface
 {
     /**
-     * To validate a DTO
-     *
-     * @return boolean
+     * To validate a DTO.
      */
     public function validate(): bool;
 }

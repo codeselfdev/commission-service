@@ -9,43 +9,27 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
 interface CurrencyExchangeInterface
 {
     /**
-     * Set HTTP client to call a url
-     *
-     * @param HttpClientInterface $client
-     * @return HttpClientInterface
+     * Set HTTP client to call a url.
      */
     public function setHttpClient(HttpClientInterface $client): HttpClientInterface;
 
     /**
-     * Get exchange rate by currency
-     *
-     * @param string $currency
-     * @return float
+     * Get exchange rate by currency.
      */
     public function getExchangeRate(string $currency): float;
 
     /**
-     * Convert one foreign currency to base currency
-     *
-     * @param float $amount
-     * @param string $currency
-     * @return string
+     * Convert one foreign currency to base currency.
      */
     public function getAmountInBasePrice(float $amount, string $currency): string;
 
     /**
-     * Convert base currency to foreign currency
-     *
-     * @param float $amount
-     * @param string $currency
-     * @return string
+     * Convert base currency to foreign currency.
      */
     public function getAmountFromBaseCurrencyToForeignCurrency(float $amount, string $currency): string;
 
     /**
-     * Get exchange rate api url
-     *
-     * @return string
+     * Get exchange rate api url.
      */
     public function getUrl(): string;
 }
