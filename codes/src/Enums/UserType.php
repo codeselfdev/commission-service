@@ -4,19 +4,18 @@ namespace Commission\Calculation\Enums;
 
 use Commission\Calculation\Traits\EnumToArray;
 
-enum CurrencyName  {
-
+enum UserType
+{
     /**
      * To avail a function which return all enum cases
      */
     use EnumToArray;
 
-    case EUR;
-    case USD;
-    case JPY;
+    case private;
+    case business;
 
     /**
-     * Getting enum value as string
+     * To get value from enum
      *
      * @return string
      */
@@ -24,9 +23,8 @@ enum CurrencyName  {
     {
         return match($this)
         {
-            CurrencyName::EUR => 'EUR',
-            CurrencyName::USD => 'USD',
-            CurrencyName::JPY => 'JPY',
+            UserType::private => 'private',
+            UserType::business => 'business',
         };
     }
 }
