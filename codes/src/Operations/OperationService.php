@@ -30,16 +30,12 @@ class OperationService implements OperationServiceInterface
         string $date,
         UserInterface $user
     ): OperationInterface {
-        $operation = OperationFactory::create(
+        return OperationFactory::create(
             $date,
             $type,
             (float) $amount,
             $user,
             $this->config
         );
-
-        $user->addTransaction($operation);
-
-        return $operation;
     }
 }

@@ -47,6 +47,7 @@ final class PrivateStrategy implements UserTypeStrategyInterface
         $user = $this->operation->getUser();
 
         $previousOperation = $this->operation->getPrevious();
+        $user->addTransaction($this->operation);
 
         if ($previousOperation === null) {
             $user->setWeeklyTransactionQuota($weeklyQuotaConfig);
